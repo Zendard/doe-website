@@ -131,6 +131,7 @@ a {
     &>img,
     &>p {
       max-width: 40vw;
+      min-width: 350px;
       height: auto;
       border-radius: var(--br);
     }
@@ -138,6 +139,7 @@ a {
 
   &>.text {
     max-width: 40vw;
+    min-width: 350px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
