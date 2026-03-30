@@ -15,7 +15,7 @@ body {
 }
 
 h1 {
-  font-size: 64px;
+  font-size: clamp(10px, 4vw, 64px);
   font-weight: 800;
 
   position: relative;
@@ -87,7 +87,7 @@ a {
   height: 128px;
   box-shadow: rgb(0, 181, 122, 0.7) 0px 0px 40px 20px;
   border-radius: var(--br);
-  background: linear-gradient(-45deg, var(--background) 50%, rgba(0, 0, 0, 0.6)), url("/img/noise.svg");
+  background: linear-gradient(-45deg, var(--background) 50%, rgba(0, 0, 0, 0.6)), url("../img/noise.svg");
 
   &>h1 {
     text-align: center;
@@ -107,7 +107,7 @@ a {
   background-color: var(--background);
   border-radius: var(--br);
   box-shadow: rgb(0, 181, 122, 0.7) 0px 0px 40px 20px;
-  background: linear-gradient(-45deg, var(--background) 50%, rgba(0, 0, 0, 0.6)), url("/img/noise.svg");
+  background: linear-gradient(-45deg, var(--background) 50%, rgba(0, 0, 0, 0.6)), url("../img/noise.svg");
   width: 80vw;
   margin: auto;
   text-align: center;
@@ -116,15 +116,14 @@ a {
 
 .abstract {
   text-align: center;
-  margin: 64px 15vw;
+  margin: 64px 5vw;
 }
 
 .text-img {
-  margin: 32px 80px;
+  margin: 64px clamp(1px, 4vw, 40px);
   display: flex;
   align-items: start;
-  justify-content: space-between;
-  gap: 48px;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 
   &>.img {
@@ -137,10 +136,21 @@ a {
     }
   }
 
-  &>p {
+  &>.text {
     max-width: 40vw;
-    text-align: justify;
-    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 32px;
+
+    &>p {
+      text-align: justify;
+    }
+
+    &>p,
+    &>h2 {
+      margin: 0px;
+    }
   }
 }
 
