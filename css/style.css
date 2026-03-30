@@ -5,10 +5,146 @@
   --text: #ffffff;
   --primary: #00b57a;
   --accent: #00ffb3;
+  --br: 15px;
 }
 
 body {
   background-color: var(--background);
   color: var(--text);
   font-family: 'Inter', sans-serif;
+}
+
+h1 {
+  font-size: 64px;
+  font-weight: 800;
+
+  position: relative;
+  left: -64px;
+  opacity: 0;
+  animation: slide-in 1.5s 0.5s forwards ease-out;
+}
+
+h2 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-left: 80px;
+}
+
+h3 {
+  font-size: 36px;
+  font-weight: 400;
+  margin-left: 80px;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 400;
+
+  &::first-letter {}
+}
+
+a {
+  color: var(--accent);
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.button {
+  color: var(--background);
+  background-color: var(--accent);
+  border-radius: var(--br);
+  padding: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  transition-duration: 0.3s;
+  border: solid var(--accent) 3px;
+
+  position: relative;
+  left: -64px;
+  opacity: 0;
+  animation: slide-in 1.5s 1s forwards ease-out;
+
+  &:hover {
+    background-color: var(--background);
+    color: var(--accent);
+    padding: 12px 24px;
+  }
+}
+
+.hero {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 64px 64px;
+  margin: auto;
+  margin-top: 48px;
+  width: 75vw;
+  height: 128px;
+  box-shadow: rgb(0, 181, 122, 0.7) 0px 0px 40px 20px;
+  border-radius: var(--br);
+  background: linear-gradient(-45deg, var(--background) 50%, rgba(0, 0, 0, 0.6)), url("/img/noise.svg");
+
+  &>h1 {
+    text-align: center;
+    margin-top: 0px;
+    position: relative;
+  }
+}
+
+@keyframes slide-in {
+  to {
+    left: 0px;
+    opacity: 1;
+  }
+}
+
+.title {
+  background-color: var(--background);
+  border-radius: var(--br);
+  box-shadow: rgb(0, 181, 122, 0.7) 0px 0px 40px 20px;
+  background: linear-gradient(-45deg, var(--background) 50%, rgba(0, 0, 0, 0.6)), url("/img/noise.svg");
+  width: 80vw;
+  margin: auto;
+  text-align: center;
+  padding: 16px 32px;
+}
+
+.abstract {
+  text-align: center;
+  margin: 64px 15vw;
+}
+
+.text-img {
+  margin: 32px 80px;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 48px;
+  flex-wrap: wrap;
+
+  &>.img {
+
+    &>img,
+    &>p {
+      max-width: 40vw;
+      height: auto;
+      border-radius: var(--br);
+    }
+  }
+
+  &>p {
+    max-width: 40vw;
+    text-align: justify;
+    margin: 0px;
+  }
+}
+
+.alt {
+  filter: brightness(80%);
+  font-size: 14px;
 }
