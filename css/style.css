@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 :root {
   --br: 15px;
@@ -9,18 +9,20 @@
   --accent: #73ab98;
 }
 
-:root[data-theme="light"] {
-  --text: #181c11;
-  --background: #f7faf5;
-  --primary: #424f30;
-  --secondary: #9fc6ad;
-  --accent: #548c79;
+@media (prefers-color-scheme: light) {
+  :root {
+    --text: #181c11;
+    --background: #f7faf5;
+    --primary: #424f30;
+    --secondary: #9fc6ad;
+    --accent: #548c79;
+  }
 }
 
 body {
   background-color: var(--background);
   color: var(--text);
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 400;
 }
 
@@ -64,19 +66,19 @@ header {
   margin: 0px;
   align-items: center;
 
-  &>h1 {
+  & > h1 {
     flex-grow: 1;
     text-align: center;
     margin: 0px;
     color: var(--primary);
   }
 
-  &>a {
+  & > a {
     color: var(--primary);
     text-decoration: none;
     margin: 0px;
 
-    &>h2 {
+    & > h2 {
       font-size: 22px;
       margin: 0px;
       color: var(--secondary);
@@ -128,9 +130,11 @@ header {
   height: 128px;
   box-shadow: rgb(0, 181, 122, 0.7) 0px 0px 40px 20px;
   border-radius: var(--br);
-  background: linear-gradient(-45deg, var(--background) 50%, rgba(0, 0, 0, 0.6)), url("../img/noise.svg");
+  background:
+    linear-gradient(-45deg, var(--background) 50%, rgba(0, 0, 0, 0.6)),
+    url("../img/noise.svg");
 
-  &>h1 {
+  & > h1 {
     text-align: center;
     margin-top: 0px;
     position: relative;
@@ -148,7 +152,9 @@ header {
   background-color: var(--background);
   border-radius: var(--br);
   box-shadow: rgb(0, 181, 122, 0.7) 0px 0px 40px 20px;
-  background: linear-gradient(-45deg, var(--background) 50%, rgba(0, 0, 0, 0.6)), url("../img/noise.svg");
+  background:
+    linear-gradient(-45deg, var(--background) 50%, rgba(0, 0, 0, 0.6)),
+    url("../img/noise.svg");
   width: 80vw;
   margin: auto;
   text-align: center;
@@ -168,29 +174,28 @@ header {
   flex-wrap: wrap;
   row-gap: 16px;
 
-  &>.img {
-
-    &>img,
-    &>p {
+  & > .img {
+    & > img,
+    & > p {
       width: clamp(10px, 90vw, 480px);
       height: auto;
       border-radius: var(--br);
     }
   }
 
-  &>.text {
+  & > .text {
     width: clamp(10px, 90vw, 480px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 32px;
 
-    &>p {
+    & > p {
       text-align: justify;
     }
 
-    &>p,
-    &>h2 {
+    & > p,
+    & > h2 {
       margin: 0px;
     }
   }
