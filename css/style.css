@@ -66,19 +66,19 @@ header {
   margin: 0px;
   align-items: center;
 
-  & > h1 {
+  &>h1 {
     flex-grow: 1;
     text-align: center;
     margin: 0px;
     color: var(--primary);
   }
 
-  & > a {
+  &>a {
     color: var(--primary);
     text-decoration: none;
     margin: 0px;
 
-    & > h2 {
+    &>h2 {
       font-size: 22px;
       margin: 0px;
       color: var(--secondary);
@@ -134,7 +134,7 @@ header {
     linear-gradient(-45deg, var(--background) 50%, rgba(0, 0, 0, 0.6)),
     url("../img/noise.svg");
 
-  & > h1 {
+  &>h1 {
     text-align: center;
     margin-top: 0px;
     position: relative;
@@ -174,28 +174,29 @@ header {
   flex-wrap: wrap;
   row-gap: 16px;
 
-  & > .img {
-    & > img,
-    & > p {
+  &>.img {
+
+    &>img,
+    &>p {
       width: clamp(10px, 90vw, 480px);
       height: auto;
       border-radius: var(--br);
     }
   }
 
-  & > .text {
+  &>.text {
     width: clamp(10px, 90vw, 480px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 32px;
 
-    & > p {
+    &>p {
       text-align: justify;
     }
 
-    & > p,
-    & > h2 {
+    &>p,
+    &>h2 {
       margin: 0px;
     }
   }
@@ -204,4 +205,10 @@ header {
 .alt {
   filter: brightness(80%);
   font-size: 14px;
+}
+
+#three {
+  width: 80vw;
+  height: 25rem;
+  margin: auto;
 }
