@@ -248,3 +248,13 @@ header {
   height: 25rem;
   margin: auto;
 }
+
+#yt {
+  width: 80vw;
+  margin: auto;
+
+  &>iframe {
+    width: 80vw;
+    height: 45vw;
+  }
+}
