@@ -37,5 +37,16 @@ function detectColorScheme() {
     button.classList.add("toggled")
   }
 }
+
+function check_theme() {
+  if (localStorage.getItem('theme') == "light") {
+    document.documentElement.setAttribute('data-theme', 'light');
+    button.classList.remove("toggled");
+  } else {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    button.classList.add("toggled");
+  }
+}
+
 detectColorScheme();
-change_theme()
+check_theme()
