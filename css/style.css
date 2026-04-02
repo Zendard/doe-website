@@ -128,8 +128,8 @@ header {
 
 #toggle {
   position: absolute;
-  right: 1rem;
-  top: 1rem;
+  right: 1vw;
+  top: 1vw;
   background-color: var(--background);
   border: solid 2px var(--primary);
   border-radius: 100px;
