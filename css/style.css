@@ -9,14 +9,12 @@
   --accent: #73ab98;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --text: #181c11;
-    --background: #f7faf5;
-    --primary: #424f30;
-    --secondary: #9fc6ad;
-    --accent: #548c79;
-  }
+[data-theme="light"] {
+  --text: #181c11;
+  --background: #f7faf5;
+  --primary: #424f30;
+  --secondary: #9fc6ad;
+  --accent: #548c79;
 }
 
 body {
@@ -125,6 +123,34 @@ header {
     background-color: var(--background);
     color: var(--accent);
     padding: 12px 24px;
+  }
+}
+
+#toggle {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  background-color: var(--background);
+  border: solid 2px var(--primary);
+  border-radius: 100px;
+  width: 4rem;
+  height: 2rem;
+  padding: 0px;
+  transition: 0.5s padding;
+
+  &::after {
+    content: "";
+    background-color: var(--primary);
+    width: 2rem;
+    height: 100%;
+    border-radius: 100px;
+    display: block;
+    margin-left: -2px;
+  }
+
+  &.toggled {
+    justify-content: end;
+    padding-left: calc(4rem - 2rem);
   }
 }
 
