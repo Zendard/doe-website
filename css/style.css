@@ -162,6 +162,7 @@ header {
   padding: 3.33vw;
   margin: auto;
   margin-top: 48px;
+  margin-bottom: 2.5rem;
   width: clamp(10px, 75vw, 1440px);
   min-height: 128px;
   box-shadow: rgb(0, 181, 122, 0.7) 0px 0px 40px 20px;
